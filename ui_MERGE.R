@@ -28,7 +28,7 @@ ui <- navbarPage(
     
     
     ##########################################
-    ####  Panel: Main>Summary             ####
+    ####  Panel: Main>Explore             ####
     ##########################################
     
     tabsetPanel(
@@ -36,7 +36,7 @@ ui <- navbarPage(
       tabPanel(
         "Explore",
         ################################################
-        #### Panel: Main>Summary>Tables & Pie Chart ####
+        #### Panel: Main>Explore>Tables & Pie Chart ####
         ################################################
         
         # ------------------
