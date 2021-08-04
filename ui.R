@@ -14,10 +14,10 @@ library(rsconnect)
 # ------------------
 
 ui <- navbarPage(
-  "GraduateEmployment",
+  "Project Name",
   theme = shinytheme("flatly"),
   tabPanel(
-    "Main",
+    "Insert Title",
     # App title ----
     titlePanel(div(
       windowTitle = "GraduatEmploymentSG",
@@ -34,7 +34,7 @@ ui <- navbarPage(
     tabsetPanel(
       type = "tabs",
       tabPanel(
-        "Summary",
+        "Explore",
         ################################################
         #### Panel: Main>Summary>Tables & Pie Chart ####
         ################################################
@@ -124,7 +124,7 @@ ui <- navbarPage(
       ################################################
       
       tabPanel(
-        "Visual Comparison",
+        "Compare",
         
         # --------------------
         # density plot section
@@ -270,7 +270,7 @@ ui <- navbarPage(
       ################################################
       
       tabPanel(
-        "Details By University",
+        "Recommend",
         h3("Graduates' Income and Employment Rate by Year", align = "center"),
         br(),
         div(style = "display:vertical-align:center;center-align",
