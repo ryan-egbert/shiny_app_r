@@ -1,0 +1,174 @@
+﻿FOD1P,Major,Major_Category,Favorite,2nd favorite,Least
+1100,GENERAL AGRICULTURE,Agriculture & Natural Resources,Environmental Science,Biology,English
+1101,AGRICULTURE PRODUCTION AND MANAGEMENT,Agriculture & Natural Resources,Environmental Science,Biology,English
+1102,AGRICULTURAL ECONOMICS,Agriculture & Natural Resources,Environmental Science,Biology,English
+1103,ANIMAL SCIENCES,Agriculture & Natural Resources,Environmental Science,Biology,English
+1104,FOOD SCIENCE,Agriculture & Natural Resources,Environmental Science,Biology,English
+1105,PLANT SCIENCE AND AGRONOMY,Agriculture & Natural Resources,Environmental Science,Biology,English
+1106,SOIL SCIENCE,Agriculture & Natural Resources,Environmental Science,Biology,English
+1199,MISCELLANEOUS AGRICULTURE,Agriculture & Natural Resources,Environmental Science,Biology,English
+1302,FORESTRY,Agriculture & Natural Resources,Environmental Science,Biology,English
+1303,NATURAL RESOURCES MANAGEMENT,Agriculture & Natural Resources,Environmental Science,Biology,English
+6000,FINE ARTS,Arts,Arts,Social Science,Math
+6001,DRAMA AND THEATER ARTS,Arts,Arts,Social Science,Math
+6002,MUSIC,Arts,Arts,Social Science,Math
+6003,VISUAL AND PERFORMING ARTS,Arts,Arts,Social Science,Math
+6004,COMMERCIAL ART AND GRAPHIC DESIGN,Arts,Arts,Social Science,Math
+6005,FILM VIDEO AND PHOTOGRAPHIC ARTS,Arts,Arts,Social Science,Math
+6007,STUDIO ARTS,Arts,Arts,Social Science,Math
+6099,MISCELLANEOUS FINE ARTS,Arts,Arts,Social Science,Math
+1301,ENVIRONMENTAL SCIENCE,Biology & Life Science,Biology,Chemistry,Arts
+3600,BIOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+3601,BIOCHEMICAL SCIENCES,Biology & Life Science,Biology,Chemistry,Arts
+3602,BOTANY,Biology & Life Science,Biology,Chemistry,Arts
+3603,MOLECULAR BIOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+3604,ECOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+3605,GENETICS,Biology & Life Science,Biology,Chemistry,Arts
+3606,MICROBIOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+3607,PHARMACOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+3608,PHYSIOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+3609,ZOOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+3611,NEUROSCIENCE,Biology & Life Science,Biology,Chemistry,Arts
+3699,MISCELLANEOUS BIOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+4006,COGNITIVE SCIENCE AND BIOPSYCHOLOGY,Biology & Life Science,Biology,Chemistry,Arts
+6200,GENERAL BUSINESS,Business,Business,English,Science
+6201,ACCOUNTING,Business,Business,English,Science
+6202,ACTUARIAL SCIENCE,Business,Business,English,Science
+6203,BUSINESS MANAGEMENT AND ADMINISTRATION,Business,Business,English,Science
+6204,OPERATIONS LOGISTICS AND E-COMMERCE,Business,Business,English,Science
+6205,BUSINESS ECONOMICS,Business,Business,English,Science
+6206,MARKETING AND MARKETING RESEARCH,Business,Business,English,Science
+6207,FINANCE,Business,Business,English,Science
+6209,HUMAN RESOURCES AND PERSONNEL MANAGEMENT,Business,Business,English,Science
+6210,INTERNATIONAL BUSINESS,Business,Business,English,Science
+6211,HOSPITALITY MANAGEMENT,Business,Business,English,Science
+6212,MANAGEMENT INFORMATION SYSTEMS AND STATISTICS,Business,Business,English,Science
+6299,MISCELLANEOUS BUSINESS & MEDICAL ADMINISTRATION,Business,Business,English,Science
+1901,COMMUNICATIONS,Communications & Journalism,English,Social Science,Math
+1902,JOURNALISM,Communications & Journalism,English,Social Science,Math
+1903,MASS MEDIA,Communications & Journalism,English,Social Science,Math
+1904,ADVERTISING AND PUBLIC RELATIONS,Communications & Journalism,English,Social Science,Math
+2001,COMMUNICATION TECHNOLOGIES,Computer Technology,Tech,Math,English
+2100,COMPUTER AND INFORMATION SYSTEMS,Computer Technology,Tech,Math,English
+2101,COMPUTER PROGRAMMING AND DATA PROCESSING,Computer Technology,Tech,Math,English
+2102,COMPUTER SCIENCE,Computer Technology,Tech,Math,English
+2105,INFORMATION SCIENCES,Computer Technology,Tech,Math,English
+2106,COMPUTER ADMINISTRATION MANAGEMENT AND SECURITY,Computer Technology,Tech,Math,English
+2107,COMPUTER NETWORKING AND TELECOMMUNICATIONS,Computer Technology,Tech,Math,English
+3700,MATHEMATICS,Mathematics,Math,Tech,English
+3701,APPLIED MATHEMATICS,Mathematics,Math,Tech,English
+3702,STATISTICS AND DECISION SCIENCE,Mathematics,Math,Tech,English
+4005,MATHEMATICS AND COMPUTER SCIENCE,Mathematics,Math,Tech,English
+2300,GENERAL EDUCATION,Education,Social Science,English,Tech
+2301,EDUCATIONAL ADMINISTRATION AND SUPERVISION,Education,Social Science,English,Tech
+2303,SCHOOL STUDENT COUNSELING,Education,Social Science,English,Tech
+2304,ELEMENTARY EDUCATION,Education,Social Science,English,Tech
+2305,MATHEMATICS TEACHER EDUCATION,Education,Social Science,English,Tech
+2306,PHYSICAL AND HEALTH EDUCATION TEACHING,Education,Social Science,English,Tech
+2307,EARLY CHILDHOOD EDUCATION,Education,Social Science,English,Tech
+2308,SCIENCE AND COMPUTER TEACHER EDUCATION,Education,Social Science,English,Tech
+2309,SECONDARY TEACHER EDUCATION,Education,Social Science,English,Tech
+2310,SPECIAL NEEDS EDUCATION,Education,Social Science,English,Tech
+2311,SOCIAL SCIENCE OR HISTORY TEACHER EDUCATION,Education,Social Science,English,Tech
+2312,TEACHER EDUCATION: MULTIPLE LEVELS,Education,Social Science,English,Tech
+2313,LANGUAGE AND DRAMA EDUCATION,Education,Social Science,English,Tech
+2314,ART AND MUSIC EDUCATION,Education,Social Science,English,Tech
+2399,MISCELLANEOUS EDUCATION,Education,Social Science,English,Tech
+3501,LIBRARY SCIENCE,Education,Social Science,English,Tech
+1401,ARCHITECTURE,Engineering,Math,Physics,Arts
+2400,GENERAL ENGINEERING,Engineering,Math,Physics,Arts
+2401,AEROSPACE ENGINEERING,Engineering,Math,Physics,Arts
+2402,BIOLOGICAL ENGINEERING,Engineering,Math,Physics,Arts
+2403,ARCHITECTURAL ENGINEERING,Engineering,Math,Physics,Arts
+2404,BIOMEDICAL ENGINEERING,Engineering,Math,Physics,Arts
+2405,CHEMICAL ENGINEERING,Engineering,Math,Physics,Arts
+2406,CIVIL ENGINEERING,Engineering,Math,Physics,Arts
+2407,COMPUTER ENGINEERING,Engineering,Math,Physics,Arts
+2408,ELECTRICAL ENGINEERING,Engineering,Math,Physics,Arts
+2409,ENGINEERING MECHANICS PHYSICS AND SCIENCE,Engineering,Math,Physics,Arts
+2410,ENVIRONMENTAL ENGINEERING,Engineering,Math,Physics,Arts
+2411,GEOLOGICAL AND GEOPHYSICAL ENGINEERING,Engineering,Math,Physics,Arts
+2412,INDUSTRIAL AND MANUFACTURING ENGINEERING,Engineering,Math,Physics,Arts
+2413,MATERIALS ENGINEERING AND MATERIALS SCIENCE,Engineering,Math,Physics,Arts
+2414,MECHANICAL ENGINEERING,Engineering,Math,Physics,Arts
+2415,METALLURGICAL ENGINEERING,Engineering,Math,Physics,Arts
+2416,MINING AND MINERAL ENGINEERING,Engineering,Math,Physics,Arts
+2417,NAVAL ARCHITECTURE AND MARINE ENGINEERING,Engineering,Math,Physics,Arts
+2418,NUCLEAR ENGINEERING,Engineering,Math,Physics,Arts
+2419,PETROLEUM ENGINEERING,Engineering,Math,Physics,Arts
+2499,MISCELLANEOUS ENGINEERING,Engineering,Math,Physics,Arts
+2500,ENGINEERING TECHNOLOGIES,Engineering,Math,Physics,Arts
+2501,ENGINEERING AND INDUSTRIAL MANAGEMENT,Engineering,Math,Physics,Arts
+2502,ELECTRICAL ENGINEERING TECHNOLOGY,Engineering,Math,Physics,Arts
+2503,INDUSTRIAL PRODUCTION TECHNOLOGIES,Engineering,Math,Physics,Arts
+2504,MECHANICAL ENGINEERING RELATED TECHNOLOGIES,Engineering,Math,Physics,Arts
+2599,MISCELLANEOUS ENGINEERING TECHNOLOGIES,Engineering,Math,Physics,Arts
+5008,MATERIALS SCIENCE,Engineering,Math,Physics,Arts
+4002,NUTRITION SCIENCES,Health,Biology,Social Science,Arts
+6100,GENERAL MEDICAL AND HEALTH SERVICES,Health,Biology,Social Science,Arts
+6102,COMMUNICATION DISORDERS SCIENCES AND SERVICES,Health,Biology,Social Science,Arts
+6103,HEALTH AND MEDICAL ADMINISTRATIVE SERVICES,Health,Biology,Social Science,Arts
+6104,MEDICAL ASSISTING SERVICES,Health,Biology,Social Science,Arts
+6105,MEDICAL TECHNOLOGIES TECHNICIANS,Health,Biology,Social Science,Arts
+6106,HEALTH AND MEDICAL PREPARATORY PROGRAMS,Health,Biology,Social Science,Arts
+6107,NURSING,Health,Biology,Social Science,Arts
+6108,PHARMACY PHARMACEUTICAL SCIENCES AND ADMINISTRATION,Health,Biology,Social Science,Arts
+6109,TREATMENT THERAPY PROFESSIONS,Health,Biology,Social Science,Arts
+6110,COMMUNITY AND PUBLIC HEALTH,Health,Biology,Social Science,Arts
+6199,MISCELLANEOUS HEALTH MEDICAL PROFESSIONS,Health,Biology,Social Science,Arts
+1501,AREA ETHNIC AND CIVILIZATION STUDIES,Humanities & Liberal Arts,Arts,Social Science,Math
+2601,LINGUISTICS AND COMPARATIVE LANGUAGE AND LITERATURE,Humanities & Liberal Arts,Arts,Social Science,Math
+2602,FRENCH GERMAN LATIN AND OTHER COMMON FOREIGN LANGUAGE STUDIES,Humanities & Liberal Arts,Arts,Social Science,Math
+2603,OTHER FOREIGN LANGUAGES,Humanities & Liberal Arts,Arts,Social Science,Math
+3301,ENGLISH LANGUAGE AND LITERATURE,Humanities & Liberal Arts,Arts,Social Science,Math
+3302,COMPOSITION AND RHETORIC,Humanities & Liberal Arts,Arts,Social Science,Math
+3401,LIBERAL ARTS,Humanities & Liberal Arts,Arts,Social Science,Math
+3402,HUMANITIES,Humanities & Liberal Arts,Arts,Social Science,Math
+4001,INTERCULTURAL AND INTERNATIONAL STUDIES,Humanities & Liberal Arts,Arts,Social Science,Math
+4801,PHILOSOPHY AND RELIGIOUS STUDIES,Humanities & Liberal Arts,Arts,Social Science,Math
+4901,THEOLOGY AND RELIGIOUS VOCATIONS,Humanities & Liberal Arts,Arts,Social Science,Math
+5502,ANTHROPOLOGY AND ARCHEOLOGY,Humanities & Liberal Arts,Arts,Social Science,Math
+6006,ART HISTORY AND CRITICISM,Humanities & Liberal Arts,Arts,Social Science,Math
+6402,HISTORY,Humanities & Liberal Arts,Arts,Social Science,Math
+6403,UNITED STATES HISTORY,Humanities & Liberal Arts,Arts,Social Science,Math
+2201,COSMETOLOGY SERVICES AND CULINARY ARTS,Industrial Arts & Consumer Services,Tech,Arts,PE
+2901,FAMILY AND CONSUMER SCIENCES,Industrial Arts & Consumer Services,Tech,Arts,PE
+3801,MILITARY TECHNOLOGIES,Industrial Arts & Consumer Services,Tech,Arts,PE
+4101,PHYSICAL FITNESS PARKS RECREATION AND LEISURE,Industrial Arts & Consumer Services,Tech,Arts,PE
+5601,CONSTRUCTION SERVICES,Industrial Arts & Consumer Services,Tech,Arts,PE
+5701,"ELECTRICAL, MECHANICAL, AND PRECISION TECHNOLOGIES AND PRODUCTION",Industrial Arts & Consumer Services,Tech,Arts,PE
+5901,TRANSPORTATION SCIENCES AND TECHNOLOGIES,Industrial Arts & Consumer Services,Tech,Arts,PE
+4000,MULTI/INTERDISCIPLINARY STUDIES,Interdisciplinary,Tech,Arts,PE
+3201,COURT REPORTING,Law & Public Policy,Social Science,English,Science
+3202,PRE-LAW AND LEGAL STUDIES,Law & Public Policy,Social Science,English,Science
+5301,CRIMINAL JUSTICE AND FIRE PROTECTION,Law & Public Policy,Social Science,English,Science
+5401,PUBLIC ADMINISTRATION,Law & Public Policy,Social Science,English,Science
+5402,PUBLIC POLICY,Law & Public Policy,Social Science,English,Science
+5000,PHYSICAL SCIENCES,Physical Sciences,Physics,Chemistry,English
+5001,ASTRONOMY AND ASTROPHYSICS,Physical Sciences,Physics,Chemistry,English
+5002,ATMOSPHERIC SCIENCES AND METEOROLOGY,Physical Sciences,Physics,Chemistry,English
+5003,CHEMISTRY,Physical Sciences,Physics,Chemistry,English
+5004,GEOLOGY AND EARTH SCIENCE,Physical Sciences,Physics,Chemistry,English
+5005,GEOSCIENCES,Physical Sciences,Physics,Chemistry,English
+5006,OCEANOGRAPHY,Physical Sciences,Physics,Chemistry,English
+5007,PHYSICS,Physical Sciences,Physics,Chemistry,English
+5098,MULTI-DISCIPLINARY OR GENERAL SCIENCE,Physical Sciences,Physics,Chemistry,English
+5102,"NUCLEAR, INDUSTRIAL RADIOLOGY, AND BIOLOGICAL TECHNOLOGIES",Physical Sciences,Physics,Chemistry,English
+5200,PSYCHOLOGY,Psychology & Social Work,Social Science,Biology,Math
+5201,EDUCATIONAL PSYCHOLOGY,Psychology & Social Work,Social Science,Biology,Math
+5202,CLINICAL PSYCHOLOGY,Psychology & Social Work,Social Science,Biology,Math
+5203,COUNSELING PSYCHOLOGY,Psychology & Social Work,Social Science,Biology,Math
+5205,INDUSTRIAL AND ORGANIZATIONAL PSYCHOLOGY,Psychology & Social Work,Social Science,Biology,Math
+5206,SOCIAL PSYCHOLOGY,Psychology & Social Work,Social Science,Biology,Math
+5299,MISCELLANEOUS PSYCHOLOGY,Psychology & Social Work,Social Science,Biology,Math
+5403,HUMAN SERVICES AND COMMUNITY ORGANIZATION,Psychology & Social Work,Social Science,Biology,Math
+5404,SOCIAL WORK,Psychology & Social Work,Social Science,Biology,Math
+4007,INTERDISCIPLINARY SOCIAL SCIENCES,Social Science,Social Science,Foreign Language,Math
+5500,GENERAL SOCIAL SCIENCES,Social Science,Social Science,Foreign Language,Math
+5501,ECONOMICS,Social Science,Social Science,Foreign Language,Math
+5503,CRIMINOLOGY,Social Science,Social Science,Foreign Language,Math
+5504,GEOGRAPHY,Social Science,Social Science,Foreign Language,Math
+5505,INTERNATIONAL RELATIONS,Social Science,Social Science,Foreign Language,Math
+5506,POLITICAL SCIENCE AND GOVERNMENT,Social Science,Social Science,Foreign Language,Math
+5507,SOCIOLOGY,Social Science,Social Science,Foreign Language,Math
+5599,MISCELLANEOUS SOCIAL SCIENCES,Social Science,Social Science,Foreign Language,Math

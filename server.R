@@ -24,6 +24,49 @@ library(shinythemes)
 data_aa = read.csv("data/all-ages.csv")
 data_rg = read.csv("data/recent-grads.csv")
 
+data = read.table("data/class-list.csv", header=T, sep=",",
+                  colClasses=c("numeric", "factor", "factor", "factor",
+                               "factor", "factor"))
+
+names(data) = c("id", "major", "y", "fav1", "fav2", "least")
+
+data$id = NULL
+data$major = NULL
+
+dummies = dummyVars(y ~ ., data=data)
+ex = data.frame(predict(dummies, newdata=data))
+
+names(ex) = gsub("\\.", "", names(ex))
+data = cbind(data$y, ex)
+names(data)[1] = "y"
+
+rm(dummies, ex)
+
+descrCorr = cor(data[,2:ncol(data)])
+highCorr = sum(abs(descrCorr[upper.tri(descrCorr)]) > 0.85)
+
+highCorrDescr = findCorrelation(descrCorr, cutoff=0.85)
+filteredDescr = data[,2:ncol(data)][,-highCorrDescr]
+
+data = cbind(data$y, filteredDescr)
+names(data)[1] = "y"
+
+rm(descrCorr, filteredDescr, highCorr, highCorrDescr)
+
+y = data$y
+data = cbind(rep(1, nrow(data)), data[2:ncol(data)])
+names(data)[1] = "ones"
+
+comboInfo = findLinearCombos(data)
+
+data = data[, -comboInfo$remove]
+data$ones = NULL
+data = cbind(y, data)
+
+rm(y, comboInfo)
+
+fit = train(data[,2:ncol(data)], data$y)
+
 #data <- read.csv("data/employment_data.csv")
 
 # data <- readRDS("data/employment_data.rds")
@@ -79,7 +122,8 @@ server <- function(session, input, output) {
     maxIncome = input$SalaryRange[2]
     data_aa %>%
       filter(Median < maxIncome, Median > minIncome) %>%
-      select("Major Category"=Major_category, Major, "Median Salary"=Median)
+      arrange(desc(Median)) %>%
+      select("Major Category"=Major_category, Major, "Median Salary"=Median) 
   })
   
   output$salaryTable = renderDataTable(salaryFilter())
@@ -92,7 +136,7 @@ server <- function(session, input, output) {
     
     p = ggplot(
         data,
-        aes(x=Employment_Rate, y=Median)
+        aes(x=Employment_Rate, y=Median, label=Major)
       ) +
       geom_point() +
       gghighlight(
@@ -156,7 +200,8 @@ server <- function(session, input, output) {
         legend.position="none",
         axis.title.x = element_blank(),
         axis.title.y = element_blank()) +
-      geom_text(aes(label=paste0(round(med_empl_rate, 2), "%")), nudge_y = -5)
+      geom_text(aes(label=paste0(round(med_empl_rate, 2), "%")), nudge_y = -5) +
+      coord_flip()
     
     p
   })
@@ -181,22 +226,50 @@ server <- function(session, input, output) {
     p
   })
   
-  output$recommendation = renderText({
-    paste("We recommend that you choose", "<font color=\"#FF0000\"><b>", input$fav1, "</b></font>", "because it's the best")
+  recommendMajorCat = eventReactive(input$recommend, {
+    fav1 = input$fav1
+    fav2 = input$fav2
+    least = input$leastFav
+    
+    d = data[1,2:ncol(data)]
+    
+    for (i in 1:ncol(d)) {
+      d[1,i] = 0
+    }
+    
+    if (!is.na(match(paste("fav1", fav1, sep=""), names(d)))) {
+      d[1,match(paste("fav1", fav1, sep=""), names(d))] = 1
+    }
+    
+    if (!is.na(match(paste("fav2", fav2, sep=""), names(d)))) {
+      d[1,match(paste("fav2", fav2, sep=""), names(d))] = 1
+    }
+    
+    if (!is.na(match(paste("least", least, sep=""), names(d)))) {
+      d[1,match(paste("least", least, sep=""), names(d))] = 1
+    }
+    
+    predict(fit, d)
   })
   
-  output$rec_table = renderTable({
-    data_aa %>%
-      filter(Major_category == input$fav1) %>%
-      mutate(Employment_Rate = round((Employed / Total) * 100, 2)) %>%
-      select("Major"=Major, "Median Salary"=Median, "Employment Rate"=Employment_Rate)
-  }, striped=T)
+  output$recommendation = renderText({
+    paste("<div style='text-align:center'>We recommend that you choose", "<h2><font color=\"#FF0000\"><b>", recommendMajorCat(), "</b></font></h2></div><br><br>")
+  })
+  
+  observeEvent(input$recommend, {
+    output$rec_table = renderTable({
+      data_aa %>%
+        filter(Major_category == recommendMajorCat()) %>%
+        mutate(Employment_Rate = round((Employed / Total) * 100, 2)) %>%
+        select("Major"=Major, "Median Salary"=Median, "Employment Rate"=Employment_Rate)
+    }, striped=T)
+  })
   
   recommendSalary = eventReactive(input$rec_salary_button, {
     minIncome = input$SalaryRange2[1]
     maxIncome = input$SalaryRange2[2]
     data_aa %>%
-      filter(Major_category == input$fav1, Median > minIncome, Median < maxIncome)
+      filter(Major_category == recommendMajorCat(), Median > minIncome, Median < maxIncome)
   })
   
   output$rec_salary = renderPlotly({

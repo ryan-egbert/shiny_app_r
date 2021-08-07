@@ -3,8 +3,6 @@
 ##########################################
 library(shinyWidgets)
 library(shiny)
-library(shinyWidgets)
-library(shiny)
 library(plotly)
 library(shinythemes)
 library(DT)
@@ -14,14 +12,14 @@ library(rsconnect)
 # ------------------
 
 ui <- navbarPage(
-  "Project Name",
+  "College Major Recommender",
   theme = shinytheme("flatly"),
   tabPanel(
-    "Insert Title",
+    "Home",
     # App title ----
     titlePanel(div(
-      windowTitle = "GraduatEmploymentSG",
-      img(src = "sg0.jpg", width = "100%", class = "bg"),
+      windowTitle = "College Major Recommendation",
+      img(src = "bg.png", width="100%", class="bg"),
     )),
     
     tags$br(),
@@ -119,7 +117,7 @@ ui <- navbarPage(
           ),
           mainPanel(
             h3("Average Salary by Major Category type"),
-            plotlyOutput(outputId = "majorcatsalaryPlot"),
+            plotlyOutput(outputId = "majorcatsalaryPlot", height=700),
             tags$br(),
             tags$br()
           )
@@ -260,7 +258,7 @@ ui <- navbarPage(
                     "Social Science",
                     "Technology"
                   ),
-                  selected = "",
+                  selected = "Biology",
                   width = 400
                 )
               ),
@@ -279,7 +277,7 @@ ui <- navbarPage(
                      "Social Science",
                      "Technology"
                    ),
-                   selected = "",
+                   selected = "English",
                    width = 400
                  )
                ),
@@ -323,11 +321,9 @@ ui <- navbarPage(
         
         actionButton(inputId="rec_salary_button", label="Filter", class = "btn btn-warning"),
         
-        plotlyOutput(outputId="rec_salary"),
+        plotlyOutput(outputId="rec_salary", height=600),
         
         tags$br(),
-        
-        plotOutput(outputId="salary_range")
       )
     )
   ),
