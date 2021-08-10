@@ -74,10 +74,20 @@ rm(y, comboInfo)
 ####   Train model                    ####
 ##########################################
 
-predictors = names(data[2:ncol(data)])
-response = "y"
-data_h2o = as.h2o(data)
-fit = h2o.randomForest(x=predictors, y=response, training_frame=data_h2o, seed=999, ntrees=100)
+# predictors = names(data[2:ncol(data)])
+# response = "y"
+# data_h2o = as.h2o(data)
+# fit = h2o.randomForest(
+#   x=predictors, 
+#   y=response, 
+#   training_frame=data_h2o, 
+#   seed=999, 
+#   ntrees=100,
+#   max_depth = 5)
+# 
+# h2o.saveModel(fit, "/Users/ryanegbert/Desktop/sum_mod3/final_proj/app/", force=TRUE)
+
+fit = h2o.loadModel("/Users/ryanegbert/Desktop/sum_mod3/final_proj/app/DRF_model_R_1628545796401_12")
 # fit = train(data[,2:ncol(data)], data$y)
 
 ##########################################
