@@ -13,12 +13,14 @@ library(gghighlight)
 library(plotly)
 library(scales)
 library(ggrepel)
+library(h2o)
+library(caret)
 
 library(rsconnect)
 library(shinythemes)
 
 ##########################################
-####   Attaching datasets             ####
+####   Load datasets                  ####
 ##########################################
 
 data_aa = read.csv("data/all-ages.csv")
@@ -33,6 +35,9 @@ names(data) = c("id", "major", "y", "fav1", "fav2", "least")
 data$id = NULL
 data$major = NULL
 
+##########################################
+####   Data Preprocessing             ####
+##########################################
 dummies = dummyVars(y ~ ., data=data)
 ex = data.frame(predict(dummies, newdata=data))
 
@@ -65,19 +70,23 @@ data = cbind(y, data)
 
 rm(y, comboInfo)
 
-fit = train(data[,2:ncol(data)], data$y)
+##########################################
+####   Train model                    ####
+##########################################
+
+predictors = names(data[2:ncol(data)])
+response = "y"
+data_h2o = as.h2o(data)
+fit = h2o.randomForest(x=predictors, y=response, training_frame=data_h2o, seed=999, ntrees=100)
+# fit = train(data[,2:ncol(data)], data$y)
 
 ##########################################
 ####   Shiny server                   ####
 ##########################################
 
 server <- function(session, input, output) {
-  ################################################
-  #### Panel: Main>Summary>Tables & Pie Chart ####
-  ################################################
-  
   # ----------------
-  # Explore section
+  # Explore panel
   # ----------------
   
   output$majorcat = renderTable({
@@ -130,6 +139,10 @@ server <- function(session, input, output) {
     
     p
   })
+  
+  # ----------------
+  # Compare panel
+  # ----------------
   
   compareSalary = eventReactive(input$compare, {
     data_aa %>%
@@ -207,6 +220,10 @@ server <- function(session, input, output) {
     p
   })
   
+  # ----------------
+  # Recommend panel
+  # ----------------
+  
   recommendMajorCat = eventReactive(input$recommend, {
     fav1 = input$fav1
     fav2 = input$fav2
@@ -230,7 +247,7 @@ server <- function(session, input, output) {
       d[1,match(paste("least", least, sep=""), names(d))] = 1
     }
     
-    predict(fit, d)
+    as.character(as.data.frame(h2o.predict(fit, as.h2o(d)))$predict)
   })
   
   output$recommendation = renderText({

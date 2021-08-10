@@ -7,6 +7,8 @@ library(plotly)
 library(shinythemes)
 library(DT)
 library(rsconnect)
+library(markdown)
+
 # ------------------
 # Main title section
 # ------------------
@@ -24,28 +26,22 @@ ui <- navbarPage(
     
     tags$br(),
     
-        ##########################################
-        ####  Panel: Main>Summary             ####
-        ##########################################
-            ################################################
-            #### Panel: Main>Summary>Tables & Pie Chart ####
-            ################################################
+    ################################################
+    #### Panel: Explore                         ####
+    ################################################
                 
     tabsetPanel(
       type = "tabs",
       tabPanel(
         "Explore",
-        ################################################
-        #### Panel: Main>Explore>Tables & Pie Chart ####
-        ################################################
 
         # ------------------
-        # ranking $ pie chart section
+        # Major Category & Majors
         # ------------------
 
         sidebarLayout(
           sidebarPanel(
-            h3("Major Category"),
+            h3("Majors in Major Category"),
             tags$br(),
             selectInput(
               inputId="majorcattable",
@@ -66,14 +62,14 @@ ui <- navbarPage(
         ),
         tags$hr(),
 
+        # ------------------
+        # Salary Overview & Majors
+        # ------------------
 
         sidebarLayout(
           sidebarPanel(
-            # ------------------
-            # Data overview filters
-            # ------------------
 
-            h3("Salary Overview"),
+            h3("Salary Overview by Major"),
             tags$br(),
             setSliderColor(c("#2c3e50 ", "#2c3e50"), c(1, 2)),
             sliderInput(
@@ -95,12 +91,13 @@ ui <- navbarPage(
           )
         ),
         
+        # ------------------
+        # Salary by Employment Rate & Majors
+        # ------------------
+        
         sidebarLayout(
           sidebarPanel(
-            # ------------------
-            # Data overview filters
-            # ------------------
-            h3("Scatterplot Panel"),
+            h3("Median Salary and Employment Rate by Major"),
             tags$br(),
             radioButtons(
               inputId="majorcatradio",
@@ -128,7 +125,7 @@ ui <- navbarPage(
       
       
       ################################################
-      #### Panel: Main>Plots                      ####
+      #### Panel: Compare                         ####
       ################################################
       
       tabPanel(
@@ -140,7 +137,7 @@ ui <- navbarPage(
         
         sidebarLayout(
           sidebarPanel(
-            h3("Major Category vs. Salary"),
+            h3("Major Category Comparison"),
             tags$br(),
             selectInput(
               inputId="cat1",
@@ -209,7 +206,7 @@ ui <- navbarPage(
       
       
       ################################################
-      #### Panel: Main>Details                    ####
+      #### Panel: Recommend                       ####
       ################################################
       
       tabPanel(
@@ -221,7 +218,7 @@ ui <- navbarPage(
               column(3,
                 selectInput(
                   inputId="fav1",
-                  label = "Select Favorite HS Course",
+                  label = "Select Favorite High School Course",
                   choices = c(
                     "Arts",
                     "Biology",
@@ -243,7 +240,7 @@ ui <- navbarPage(
               column(3,
                 selectInput(
                   inputId="fav2",
-                  label="Select Second Favorite HS Course",
+                  label="Select Second Favorite High School Course",
                   choices = c(
                     "Arts",
                     "Biology",
@@ -265,7 +262,7 @@ ui <- navbarPage(
               column(3,
                  selectInput(
                    inputId="leastFav",
-                   "Select Least Favorite HS Course",
+                   "Select Least Favorite High School Course",
                    choices = c(
                      "Arts",
                      "Business",
@@ -293,22 +290,15 @@ ui <- navbarPage(
         
         tags$br(),
         tags$br(),
-        tags$hr(),
-        tags$br(),
         
         htmlOutput(outputId="recommendation"),
         tableOutput(outputId="rec_table"),
 
         tags$br(),
-        tags$br(),
-        tags$br(),
-        tags$br(),
-        tags$hr(),
-        tags$br(),
         
         tags$br(),
         
-        h3("Salary Overview"),
+        h3("Salary Overview by Major"),
         tags$br(),
         setSliderColor(c("#2c3e50 ", "#2c3e50"), c(1, 2)),
         sliderInput(
@@ -341,5 +331,5 @@ ui <- navbarPage(
   #### Panel: About                           ####
   ################################################
   tabPanel("About",
-           fluidPage(htmlOutput("abo")))
+           fluidPage(includeMarkdown("about.rmd")))
 )
