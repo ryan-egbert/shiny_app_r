@@ -48,7 +48,7 @@ ui <- navbarPage(
               label="Select a major category to view",
               choices = list("Agriculture & Natural Resources", "Arts", "Biology & Life Science",
                              "Business", "Communications & Journalism","Computer Technology","Education",
-                             "Engineering","Health","Humanities & Liberal Arts","Industrial Arts & Consumer Service Tech",
+                             "Engineering","Health","Humanities & Liberal Arts","Industrial Arts & Consumer Services",
                              "Law & Public Policy","Mathematics","Physical Sciences","Psychology & Social Work","Social Science"),
               selected = "Agriculture & Natural Resourcces"
             )
@@ -113,7 +113,7 @@ ui <- navbarPage(
             
           ),
           mainPanel(
-            h3("Average Salary by Major Category type"),
+            # h3("Average Salary and Employment Rate for Each Major"),
             plotlyOutput(outputId = "majorcatsalaryPlot", height=700),
             tags$br(),
             tags$br()

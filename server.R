@@ -86,7 +86,7 @@ rm(y, comboInfo)
 #   max_depth = 5)
 # 
 # h2o.saveModel(fit, "/Users/ryanegbert/Desktop/sum_mod3/final_proj/app/", force=TRUE)
-
+h2o.init()
 fit = h2o.loadModel("/Users/ryanegbert/Desktop/sum_mod3/final_proj/app/DRF_model_R_1628545796401_12")
 # fit = train(data[,2:ncol(data)], data$y)
 
