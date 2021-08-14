@@ -1,0 +1,13 @@
+name: college-major-recommender
+title: college-major-recommender
+username:
+account: regbert
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4489630
+bundleId: 4921845
+url: https://regbert.shinyapps.io/college-major-recommender/
+when: 1628908595.33217
+lastSyncTime: 1628908595.33219
+asMultiple: FALSE
+asStatic: FALSE
